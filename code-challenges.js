@@ -120,6 +120,8 @@ const calculator = (num1, sym, num2) => {
 	}
 }
 
+// NOTE: I know this can be done in a cleaner way.
+
 // call the function
 console.log('Problem #5')
 console.log(calculator(3, '*', 9)) // Expected output: 27

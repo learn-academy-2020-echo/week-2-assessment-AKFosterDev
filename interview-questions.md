@@ -7,9 +7,9 @@ there is always something more to learn.
 
 1. Why would you use the method super()?
 
-Your answer: The super() method allows you to pass the methods from the parent
-down to the child class component and allows the child class component to have
-the full functionality of the parent class.
+Your answer: The super() method allows you to pass the variables and methods
+from the parent down to the child class component and allows the child class
+component to have the full functionality of the parent class.
 
 Researched answer: super() will call the constructor of its parent class.
 super() is called inside a react component only if it has a constructor. However
@@ -23,7 +23,7 @@ this.props
 Your answer: The virtual DOM allows a React app to update components in real
 time without having to refresh the browser. The updates are affected by
 behavior/actions of the user on a component that change the state of a component
-in real time.
+in real time. (ie. clicking a button, typing into a search box or form)
 
 Researched answer: The virtual DOM (VDOM) is a programming concept where an
 ideal, or “virtual”, representation of a UI is kept in memory and synced with
@@ -54,8 +54,8 @@ behind the scenes.
 
 5. What is state in React?
 
-Your answer: State an object that represents static data and behavior within a
-React component.
+Your answer: State is an object that represents static data and behavior within
+a React component.
 
 Researched answer: The state is an instance of React Component Class can be
 defined as an object of a set of observable properties that control the behavior
@@ -87,7 +87,7 @@ Research and define the following terms to the best of your ability.
   Every component in React goes through a lifecycle of events. I like to think
   of them as going through a cycle of birth, growth, and death.
 
-I found a very useful diagram:
+I found a very useful diagram with links:
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 - React props: “Props” is a special keyword in React, which stands for
