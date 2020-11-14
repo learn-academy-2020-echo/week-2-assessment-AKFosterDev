@@ -8,7 +8,7 @@ let num2 = 0 // Expected output: "0 is divisible by three"
 let num3 = -7 // Expected output: "-7 is not divisble by three"
 
 // create a function that accepts a number as an argument
-const divisibleByThree = (num) => {
+const divisibleByThree = num => {
 	// deside if argument is equally divisible by 3
 	if (num % 3 === 0) {
 		// if argument is divisible by three return '(argument) is divisible by three'
@@ -39,10 +39,10 @@ let randomNouns = [
 ]
 
 // create a function that takes an argument of an array of strings
-const capitalizeArray = (arr) => {
+const capitalizeArray = arr => {
 	// iterate through array argument and capitalize each string
 	// create new variable to hold the new array
-	let newCapitalizedArray = arr.map((item) => {
+	let newCapitalizedArray = arr.map(item => {
 		// isolate first character in each word to capitalize then add the rest of the word back on
 		return item.charAt(0).toUpperCase() + item.substr(1)
 	})
@@ -60,10 +60,10 @@ console.log(capitalizeArray(randomNouns))
 let mixedDataArray = [true, 8, 'hello', 90, -8, null, 0, 46, 59, 107, 'hey!']
 
 // create a function that accepts an array of mixed data types
-const numbersOnlyArray = (arr) => {
+const numbersOnlyArray = arr => {
 	// iterate through array argument separating out the number data types
 	// create a variable to hold the new array containing only numbers
-	let newNumbersArray = arr.filter((item) => {
+	let newNumbersArray = arr.filter(item => {
 		return typeof item === 'number'
 	})
 	// sort new number array (compare numbers to make sure values compared not just first digit)
@@ -83,7 +83,7 @@ let vowelTester2 = 'throw' // Expected output: 3
 // create a varible that contains an array of vowels to compare against
 
 // create a function that takes a string as an argument
-const returnFirstVowel = (str) => {
+const returnFirstVowel = str => {
 	// create a variable to hold the resulting search
 	let firstVowelResult = str.search(/[a, e, i, o, u, A, E, I, O, U]/g)
 	// return the index of the first vowel
@@ -96,13 +96,32 @@ console.log(returnFirstVowel(vowelTester1))
 console.log(returnFirstVowel(vowelTester2))
 
 // --------------------5) Create a function that takes three arguments - two numbers and a mathematical operation (+, -, *, /) and performs the given calculation. If the input tries to divide by 0, return: "Can't divide by 0!"
-
 // Uncomment and use the following console logs to test your function
-// console.log(calculator(3, "*", 9))
-// Expected output: 27
 
-// console.log(calculator(16, "+", 3))
-// Expected output: 19
+// create a function that takes three arguments two numbers and a mathematical operation (+, -, *, /)
+const calculator = (num1, sym, num2) => {
+	// create conditional that takes the two numbers and performs the given calculation based on passed arguments
 
-// console.log(calculator(89, "/", 0))
-// Expected output: "Can't divide by 0!
+	if (num2 === 0 && sym === '/') {
+		// if input arguments try to divide by 0 return 'Can't divide by 0!'
+		return "Can't divide by 0!"
+	}
+	// otherwise perform calculation and return the result
+	else if (sym === '+') {
+		return num1 + num2
+	} else if (sym === '-') {
+		return num1 - num2
+	} else if (sym === '*') {
+		return num1 * num2
+	} else if (sym === '/') {
+		return num1 / num2
+	} else {
+		return 'Something went wrong'
+	}
+}
+
+// call the function
+console.log('Problem #5')
+console.log(calculator(3, '*', 9)) // Expected output: 27
+console.log(calculator(16, '+', 3)) // Expected output: 19
+console.log(calculator(89, '/', 0)) // Expected output: "Can't divide by 0!
