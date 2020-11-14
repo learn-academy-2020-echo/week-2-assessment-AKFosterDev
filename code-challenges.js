@@ -124,4 +124,4 @@ const calculator = (num1, sym, num2) => {
 console.log('Problem #5')
 console.log(calculator(3, '*', 9)) // Expected output: 27
 console.log(calculator(16, '+', 3)) // Expected output: 19
-console.log(calculator(89, '/', 0)) // Expected output: "Can't divide by 0!
+console.log(calculator(89, '/', 0)) // Expected output: "Can't divide by 0!"
